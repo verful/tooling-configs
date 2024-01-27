@@ -8,7 +8,7 @@ import type {
 
 export async function typescript(
   options?: OptionsTypeScriptWithTypes &
-    OptionsTypeScriptParserOptions & { typeAwareRules?: boolean },
+    OptionsTypeScriptParserOptions & { typeAwareRules?: boolean }
 ): Promise<ConfigItem[]> {
   const { parserOptions = {} } = options ?? {}
 

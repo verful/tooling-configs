@@ -57,14 +57,14 @@ export async function verful(
     jsdoc(),
     unicorn(),
     node(),
-    unicorn(),
+    unicorn()
   )
 
   if (enableTypescript) {
     configs.push(
       typescript({
         ...(typeof enableTypescript !== 'boolean' ? enableTypescript : {}),
-      }),
+      })
     )
   }
 
