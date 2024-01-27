@@ -6,7 +6,6 @@ export async function jsdoc(): Promise<ConfigItem[]> {
     {
       name: 'verful:jsdoc',
       plugins: {
-        // @ts-expect-error missing types
         jsdoc: await interopDefault(import('eslint-plugin-jsdoc')),
       },
       rules: {
