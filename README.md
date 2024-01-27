@@ -4,7 +4,7 @@
 
 ## Features
 
-- Designed to work with Prettier, Vue, Typescript, JSX, Node, AdonisJS out of the box
+- Designed to work with Prettier, React, Typescript, JSX, Node, AdonisJS out of the box
 - Lint json files ( TSConfig, package.json )
 - Super easy to use ( one line of code )
 - [ESLint flat config](https://eslint.org/docs/latest/use/configure/configuration-files-new)

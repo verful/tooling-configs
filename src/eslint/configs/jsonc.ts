@@ -42,7 +42,6 @@ export async function jsonc(): Promise<ConfigItem[]> {
         'jsonc/no-useless-escape': 'error',
         'jsonc/space-unary-ops': 'error',
         'jsonc/valid-json-number': 'error',
-        'jsonc/vue-custom-block/no-parsing-error': 'error',
       },
     },
   ]
