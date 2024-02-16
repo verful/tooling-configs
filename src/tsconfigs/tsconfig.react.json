@@ -9,8 +9,8 @@
     "module": "NodeNext",
     "moduleResolution": "Bundler",
     "resolveJsonModule": true,
+    "exactOptionalPropertyTypes": false,
     "allowSyntheticDefaultImports": true,
-    "esModuleInterop": true,
-    "verbatimModuleSyntax": true
+    "esModuleInterop": true
   }
 }
