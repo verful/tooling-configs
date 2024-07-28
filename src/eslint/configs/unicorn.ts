@@ -8,6 +8,9 @@ export async function unicorn(): Promise<ConfigItem[]> {
       name: 'verful:unicorn',
       rules: {
         'unicorn/filename-case': ['error', { case: 'snakeCase' }],
+        'unicorn/prevent-abbreviations': ['error', { allowList: { env: true } }],
+        'unicorn/no-null': 'off',
+        'unicorn/no-array-reduce': 'off',
       },
     },
   ]

@@ -12,7 +12,6 @@ import { adonisjs } from './configs/adonisjs.js'
 import { combine, interopDefault } from './utils.js'
 import { javascript } from './configs/javascript.js'
 import { typescript } from './configs/typescript.js'
-import { tailwindcss } from './configs/tailwindcss.js'
 import { perfectionist } from './configs/perfectionist.js'
 import { hasAdonisjs, hasTypeScript, hasReact } from './env.js'
 import { sortPackageJson, sortTsconfig } from './configs/sort.js'
@@ -32,7 +31,6 @@ export async function verful(
     jsonc: enableJsonc = true,
     prettier: enablePrettier = true,
     adonisjs: enableAdonisJs = hasAdonisjs,
-    tailwindcss: enableTailwindcss = true,
   } = options
 
   const configs: Awaitable<ConfigItem[]>[] = []
@@ -72,10 +70,6 @@ export async function verful(
     configs.push(react())
   }
 
-  if (enableTailwindcss) {
-    configs.push(tailwindcss())
-  }
-
   if (enableJsonc) {
     configs.push(jsonc(), sortPackageJson(), sortTsconfig())
   }
@@ -89,5 +83,6 @@ export async function verful(
   }
 
   const resolved = await Promise.all(configs)
+
   return combine(...resolved, ...userConfigs)
 }
