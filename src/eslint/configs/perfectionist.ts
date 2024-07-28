@@ -2,14 +2,13 @@ import { interopDefault } from '../utils.js'
 import type { ConfigItem } from '../types.js'
 
 export async function perfectionist(): Promise<ConfigItem[]> {
-  // @ts-expect-error missing types
   const pluginPerfectionist = await interopDefault(import('eslint-plugin-perfectionist'))
 
   return [
     {
       name: 'verful:perfectionist',
-      plugins: { perfectionist: pluginPerfectionist },
-
+      // @ts-expect-error
+      plugins: pluginPerfectionist.default,
       rules: {
         'perfectionist/sort-imports': [
           'error',
