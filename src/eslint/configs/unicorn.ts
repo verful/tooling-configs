@@ -3,7 +3,7 @@ import type { ConfigItem } from '../types.js'
 
 export async function unicorn(): Promise<ConfigItem[]> {
   return [
-    pluginUnicorn.configs['flat/recommended'],
+    pluginUnicorn.configs['flat/recommended'] as any,
     {
       name: 'verful:unicorn',
       rules: {
