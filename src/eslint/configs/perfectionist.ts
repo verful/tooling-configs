@@ -7,8 +7,9 @@ export async function perfectionist(): Promise<ConfigItem[]> {
   return [
     {
       name: 'verful:perfectionist',
-      // @ts-expect-error
-      plugins: pluginPerfectionist.default,
+      plugins: {
+        perfectionist: pluginPerfectionist,
+      },
       rules: {
         'perfectionist/sort-imports': [
           'error',
