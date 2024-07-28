@@ -1,7 +1,7 @@
 {
   "name": "@verful/tooling-configs",
   "type": "module",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "description": "ESLint config presets",
   "author": "Arthur Emanuel <arthur-er@pm.me>",
   "license": "MIT",
