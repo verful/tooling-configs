@@ -15,7 +15,7 @@ export async function react(): Promise<ConfigItem[]> {
       name: 'verful:react',
       files: [GLOB_JS, GLOB_JSX, GLOB_TSX],
 
-      plugins: { react: pluginReact },
+      plugins: { 'react': pluginReact, 'react-hooks': pluginReactHooks },
       languageOptions: {
         parserOptions: {
           ecmaFeatures: { jsx: true },
