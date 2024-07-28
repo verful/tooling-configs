@@ -13,11 +13,11 @@ export async function perfectionist(): Promise<ConfigItem[]> {
         'perfectionist/sort-imports': [
           'error',
           {
-            'type': 'line-length',
-            'order': 'asc',
+            type: 'line-length',
+            order: 'asc',
 
-            'internal-pattern': ['@/**', '#*/**'],
-            'groups': [
+            internalPattern: ['@/**', '#*/**'],
+            groups: [
               // Import 'foo.js' or import 'foo.css'
               ['side-effect', 'side-effect-style'],
 
@@ -41,7 +41,6 @@ export async function perfectionist(): Promise<ConfigItem[]> {
             ],
           },
         ],
-
         'perfectionist/sort-enums': ['error', { type: 'line-length', order: 'asc' }],
       },
     },
