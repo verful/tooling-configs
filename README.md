@@ -78,6 +78,19 @@ export default defineConfig({
 })
 ```
 
+### AdonisJS
+
+`verful({ adonisjs: true })` is on by default when `@adonisjs/core` is a dependency. Besides the official `@adonisjs/eslint-plugin` lazy-import rules, it enforces these boundaries by folder, so it works with both the default `app/` layout and a `src/` layout:
+
+| Files               | Rule                                                                                                                                  |
+| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| `**/controllers/**` | No `@adonisjs/lucid/services/db` (no raw SQL or ad-hoc queries in controllers), no `await` inside loops (N+1 queries)                 |
+| `**/models/**`      | No `@adonisjs/mail`, `@adonisjs/queue`, `@adonisjs/transmit`, `@adonisjs/inertia` or `@adonisjs/core/http`: hooks only normalize data |
+| `inertia/**`        | No `#` subpath imports (backend code) and only type imports from `@adonisjs/core` and `@adonisjs/lucid`                               |
+| `inertia/**`        | `verful-adonisjs/prefer-link-route`: `<Link>` and `<Form>` take `route`, not a hard-coded `href` or `action`                          |
+
+The generated `.adonisjs/` folder is ignored. To allow a known exception, turn the rule off for that file in your config's `overrides`.
+
 ### oxfmt
 
 ```ts

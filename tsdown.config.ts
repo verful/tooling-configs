@@ -1,7 +1,12 @@
 import { defineConfig } from 'tsdown'
 
 export default defineConfig({
-  entry: ['./src/oxc/lint.ts', './src/oxc/fmt.ts', './src/oxc/anti-slop/index.ts'],
+  entry: [
+    './src/oxc/lint.ts',
+    './src/oxc/fmt.ts',
+    './src/oxc/anti-slop/index.ts',
+    './src/oxc/adonisjs/index.ts',
+  ],
   dts: true,
   clean: true,
   format: ['esm'],
