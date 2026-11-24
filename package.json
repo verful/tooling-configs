@@ -18,7 +18,8 @@
     "./tsconfigs/*": "./dist/tsconfigs/*.json",
     "./oxc/lint": "./dist/lint.mjs",
     "./oxc/fmt": "./dist/fmt.mjs",
-    "./oxc/anti-slop": "./dist/anti-slop/index.mjs"
+    "./oxc/anti-slop": "./dist/anti-slop/index.mjs",
+    "./oxc/adonisjs": "./dist/adonisjs/index.mjs"
   },
   "publishConfig": {
     "access": "public",
@@ -32,7 +33,7 @@
     "typecheck": "tsc --noEmit",
     "checks": "pnpm typecheck && pnpm lint && pnpm format:check && pnpm test",
     "release": "pnpm build && release-it",
-    "test": "node --test \"src/oxc/anti-slop/**/*.test.ts\""
+    "test": "node --test \"src/oxc/**/*.test.ts\""
   },
   "dependencies": {
     "@adonisjs/eslint-plugin": "^2.2.2",
